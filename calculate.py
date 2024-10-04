@@ -7,6 +7,13 @@ funcs = ['perimeter', 'area']
 sizes = {}
 
 def calc(fig, func, size):
+	'''Функция выводит на экран определенную характеристику данной фигуры.
+		Параметры:
+			fig (string) : тип фигуры
+			func (string) : характеристика фигуры, которую нужно посчитать и вывести
+		Возвращаемое значение:
+			None
+	'''
 	assert fig in figs
 	assert func in funcs
 
