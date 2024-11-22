@@ -31,7 +31,7 @@ class TestCalculate(unittest.TestCase):
         with self.assertRaises(ValueError) as context:
             calc('circle', 'volume', [5])
         self.assertIn(
-            "Figure 'volume' is not available.", str(context.exception)
+            "Figure 'volume' is not available", str(context.exception)
         )
 
     def test5(self):
@@ -70,16 +70,14 @@ class TestCalculate(unittest.TestCase):
             result = calc('circle', 'area', [4])
             self.assertAlmostEqual(result, 50.26548245743669)
             mocked_print.assert_called_with(
-                'area of circle with size(s) [4] is '
-                '50.26548245743669'
+                'Area of circle with size(s) [4] is 50.26548245743669'
             )                                 
     def test10(self):
         with patch('builtins.print') as mocked_print:
             result = calc('circle', 'perimeter', [4])
             self.assertAlmostEqual(result, 25.13274122871835)
             mocked_print.assert_called_with(
-                'perimeter of circle with size(s) [4] is '
-                '25.13274122871835'
+                'Perimeter of circle with size(s) [4] is 25.13274122871835'
             )
 
     def test11(self):
@@ -87,8 +85,7 @@ class TestCalculate(unittest.TestCase):
             result = calc('square', 'area', [4])
             self.assertEqual(result, 16)
             mocked_print.assert_called_with(
-                'area of square with size(s) [4] is '
-                '16'
+                'Area of square with size(s) [4] is 16'
             )
 
     def test12(self):
@@ -96,8 +93,7 @@ class TestCalculate(unittest.TestCase):
             result = calc('square', 'perimeter', [4])
             self.assertEqual(result, 16)
             mocked_print.assert_called_with(
-                'perimeter of square with size(s) [4] is '
-                '16'
+                'Perimeter of square with size(s) [4] is 16'
             )
 
     def test13(self):
@@ -105,8 +101,7 @@ class TestCalculate(unittest.TestCase):
             result = calc('triangle', 'area', [3, 4, 5])
             self.assertAlmostEqual(result, 6.0)
             mocked_print.assert_called_with(
-                'area of triangle with size(s) [3, 4, 5] is '
-                '6.0'
+                'Area of triangle with size(s) [3, 4, 5] is 6.0'
             )
 
     def test14(self):
@@ -114,8 +109,7 @@ class TestCalculate(unittest.TestCase):
             result = calc('triangle', 'perimeter', [3, 4, 5])
             self.assertEqual(result, 12)
             mocked_print.assert_called_with(
-                'perimeter of triangle with size(s) [3, 4, 5] is '
-                '12'
+                'Perimeter of triangle with size(s) [3, 4, 5] is 12'
             )
 
 

@@ -21,7 +21,7 @@ class TestTriangle(unittest.TestCase):
             area(a, b, c)
 
     def test4(self):
-        a, b, c = 3, 3, 5
+        a, b, c = 3, 4, 5
         s = (a + b + c) / 2
         correct = math.sqrt(s * (s - a) * (s - b) * (s - c))
         self.assertAlmostEqual(area(a, b, c), correct)
