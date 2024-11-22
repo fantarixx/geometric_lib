@@ -17,7 +17,7 @@ class TestSquare(unittest.TestCase):
     def test3(self):
         a = 0
         correct = 0
-        self.assertEqual(area(a), expected_area)
+        self.assertEqual(area(a), correct)
 
     def test4(self):
         a = 0
@@ -31,7 +31,7 @@ class TestSquare(unittest.TestCase):
 
     def test6(self):
         a = 13
-        correct = 13 * a
+        correct = 4 * a
         self.assertEqual(perimeter(a), correct)
 
 
