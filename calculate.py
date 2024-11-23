@@ -28,8 +28,8 @@ def calc(fig, func, size):
     expected_params = FIGS[fig]['params']
     if len(size) != expected_params:
         raise ValueError(
-            f"For figure '{fig}', {expected_params} parameter(s) are required, but "
-            f"{len(size)} were provided."
+            f"For figure '{fig}', {expected_params} parameter(s) are required, "
+            f"but {len(size)} were provided."
         )
 
     result = func_to_call(*size)

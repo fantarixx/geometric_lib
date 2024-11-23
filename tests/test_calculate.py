@@ -53,7 +53,8 @@ class TestCalculate(unittest.TestCase):
         with self.assertRaises(ValueError) as context:
             calc('circle', 'area', [3, 4])
         self.assertIn(
-            "For figure 'circle', 1 parameter(s) are required, but 2 were provided.",
+            "For figure 'circle', 1 parameter(s) are required, but 2 were "
+            "provided.",
             str(context.exception)
         )
 
@@ -61,7 +62,8 @@ class TestCalculate(unittest.TestCase):
         with self.assertRaises(ValueError) as context:
             calc('triangle', 'area', [3, 4])
         self.assertIn(
-            "For figure 'triangle', 3 parameter(s) are required, but 2 were provided.",
+            "For figure 'triangle', 3 parameter(s) are required, but 2 were "
+            "provided.",
             str(context.exception)
         )
 
@@ -71,7 +73,8 @@ class TestCalculate(unittest.TestCase):
             self.assertAlmostEqual(result, 50.26548245743669)
             mocked_print.assert_called_with(
                 'Area of circle with size(s) [4] is 50.26548245743669'
-            )                                 
+            )
+
     def test10(self):
         with patch('builtins.print') as mocked_print:
             result = calc('circle', 'perimeter', [4])

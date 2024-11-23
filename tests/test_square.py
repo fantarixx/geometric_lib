@@ -35,6 +35,5 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(perimeter(a), correct)
 
 
-
 if __name__ == '__main__':
     unittest.main()
