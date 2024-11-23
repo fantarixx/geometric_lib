@@ -1,20 +1,24 @@
-
 def area(a):
-    '''Функция возвращает площадь квадрата.
-	Параметры:
-		a : число, равное стороне квадарата
-	Возвращаемое значение:
-		a * a : квадрат числа 'a', который равен площади квадрата со строной 'a'    
+    '''The function returns the area of a square.
+    Parameters:
+        a : a number representing the side length of the square
+    Returns:
+        a * a : the square of the number 'a', which equals the area of a square 
+                with side 'a'
     '''
+    if a < 0:
+        raise ValueError("The side of the square cannot be negative.")
     return a * a
 
 
 def perimeter(a):
-    '''Функция возвращает периметр квадрата.
-	Параметры:
-		a : число, равное стороне квадрата
-	Возвращаемое значение:
-		4 * a : произведение числа 'a' на 4, что равно периметру квадрата со стороной 'a'
+    '''The function returns the perimeter of a square.
+    Parameters:
+        a : a number representing the side length of the square
+    Returns:
+        4 * a : the product of the number 'a' and 4, which equals the perimeter 
+                of a square with side 'a'
     '''
-
+    if a < 0:
+        raise ValueError("The side of the square cannot be negative.")
     return 4 * a
