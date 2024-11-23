@@ -77,7 +77,7 @@ class TestCalculate(unittest.TestCase):
             result = calc('circle', 'perimeter', [4])
             self.assertAlmostEqual(result, 25.132741228718345)
             mocked_print.assert_called_with(
-                'Perimeter of circle with size(s) [4] is 25.13274122871835'
+                'Perimeter of circle with size(s) [4] is 25.132741228718345'
             )
 
     def test11(self):
