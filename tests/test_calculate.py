@@ -31,7 +31,7 @@ class TestCalculate(unittest.TestCase):
         with self.assertRaises(ValueError) as context:
             calc('circle', 'volume', [5])
         self.assertIn(
-            "Figure 'volume' is not available", str(context.exception)
+            "Function 'volume' is not available.", str(context.exception)
         )
 
     def test5(self):
@@ -61,7 +61,7 @@ class TestCalculate(unittest.TestCase):
         with self.assertRaises(ValueError) as context:
             calc('triangle', 'area', [3, 4])
         self.assertIn(
-            "For figure 'treangle', 3 parameter(s) are required, but 2 were provided.",
+            "For figure 'triangle', 3 parameter(s) are required, but 2 were provided.",
             str(context.exception)
         )
 
@@ -75,7 +75,7 @@ class TestCalculate(unittest.TestCase):
     def test10(self):
         with patch('builtins.print') as mocked_print:
             result = calc('circle', 'perimeter', [4])
-            self.assertAlmostEqual(result, 25.13274122871835)
+            self.assertAlmostEqual(result, 25.132741228718345)
             mocked_print.assert_called_with(
                 'Perimeter of circle with size(s) [4] is 25.13274122871835'
             )

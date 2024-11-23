@@ -7,7 +7,7 @@ def area(r):
     Returns:
         math.pi * r * r : the area of the circle
     '''
-    if r <= 0:
+    if r < 0:
         raise ValueError("The radius cannot be negative.")
     return math.pi * r * r
 
@@ -18,7 +18,7 @@ def perimeter(r):
     Returns:
         2 * math.pi * r : the circumference of the circle
     '''
-    if r <= 0:
+    if r < 0:
         raise ValueError("The radius cannot be negative.")
     
     return 2 * math.pi * r
